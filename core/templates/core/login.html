@@ -1,0 +1,25 @@
+<!-- core/templates/core/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Explicitly add username and password fields -->
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </p>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
